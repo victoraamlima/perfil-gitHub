@@ -34,7 +34,7 @@ async function getUserData(userName) {
         screen.renderNotFound()
         return
     }
-
+    
     const repositoriesResponse = await getRepositories(userName)
 
     user.setInfo(userResponse)
