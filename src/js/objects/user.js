@@ -1,4 +1,4 @@
-const user ={
+const user = {
     avatarUrl: "",
     name: "",
     bio: "",
@@ -6,7 +6,8 @@ const user ={
     followers: "",
     following: "",
     repositories: [],
-    setInfo(gitHubUser){
+    events: [],
+    setInfo(gitHubUser) {
         this.avatarUrl = gitHubUser.avatar_url
         this.name = gitHubUser.name
         this.bio = gitHubUser.bio
@@ -14,9 +15,12 @@ const user ={
         this.followers = gitHubUser.followers
         this.following = gitHubUser.following
     },
-    setRepositories(repositories){
+    setRepositories(repositories) {
         this.repositories = repositories
+    },
+    setEvents(events) {
+        this.events = events
     }
 }
 
-export {user}
+export { user }

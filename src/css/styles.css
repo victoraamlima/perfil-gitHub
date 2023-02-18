@@ -128,6 +128,47 @@ main {
   margin-top: 10px;
 }
 
+.container .profile-data .events h3{
+  font-size: 20px;  
+  font-weight: 600;
+  line-height: 23px;
+}
+
+/* .container .profile-data .events ul {
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+
+} */
+
+.container .profile-data .events ul li {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 15px;
+  grid-gap: 10px;
+  align-items: start;
+
+}
+
+.container .profile-data .events h4 a{
+  font-size: 15px;  
+  font-weight: 600;
+  line-height: 23px;
+  /* margin: 10px 10px 0 0; */
+  display: flex;
+  justify-content: end;
+  text-align: left;
+}
+
+.container .profile-data .events p{
+  font-size: 15px;  
+  font-weight: 400;
+  line-height: 23px;
+  display: flex;
+  text-align: left;
+}
+
+
 /* REPOSITORIES */
 
 .container .profile-data .repositories h2{
