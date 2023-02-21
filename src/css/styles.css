@@ -178,8 +178,26 @@ main {
 
 .container .profile-data .repositories ul{
   display: flex;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: center;
+
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%; */
+}
+
+.container .profile-data .repositories .repository-info {
+  display: flex;
+  justify-content: center;
+}
+
+.container .profile-data .repositories .repository-info li{
+  background-color: #7755e7;
+  color: #fff;
+  margin: 10px;
+  display: flex;
+  padding: 10px;
+  border-radius: 7px;
 }
 
 .container .profile-data .repositories ul li a{

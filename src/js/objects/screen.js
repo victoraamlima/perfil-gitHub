@@ -13,7 +13,7 @@ const screen = {
                                         </div>`
 
         let eventsItems = ""
-        let eventsQuantity = 10
+        let eventsQuantity = 20
 
         function showEventsQuantity() {
             for (let i = 0; i < user.events.length; i++) {
@@ -48,8 +48,61 @@ const screen = {
         let repositoriesItems = ""
 
         user.repositories.forEach(repo => {
-            repositoriesItems += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
+            // let carro = "aa"
+
+            async function getRepositoriesLanguages(repo) {
+                const response = await fetch(`https://api.github.com/repos/${repo.full_name}/languages`)
+
+                // carro = "aaa"
+
+                return await response.json()
+
+            }
+            // console.log(getRepositoriesLanguages(repo))
+            const teste = getRepositoriesLanguages(repo)
+
+            
+
+            console.log(teste)
+            console.log(teste.css)
+
+            // console.log(carro)
+
+            // async function test(repo) {
+            //     var repositoriesLanguagesResponse = await getRepositoriesLanguages(repo)
+            // }
+
+            // console.log(test(repo))
+
+
+
+            // console.log(grepositoriesLanguagesResponse)
+
+            // console.log(repo)
+            // console.log(repo.languages_url)
+            repositoriesItems += `  <li>
+                                        <a href="${repo.html_url}" target="_blank">
+                                        ${repo.name}
+                                        
+                                            <ul class="repository-info">
+                                                <li>
+                                                    🍴${repo.forks}            
+                                                </li>
+                                                <li>
+                                                    ⭐${repo.stargazers_count}          
+                                                </li>
+                                                <li>
+                                                    👀${repo.watchers}             
+                                                </li>
+                                                <li>
+                                                    🌅${repo.language ?? ""}           
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>`
+
         })
+
 
         if (user.repositories.length > 0) {
             this.userProfile.innerHTML += ` <div class="repositories section">

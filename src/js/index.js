@@ -46,3 +46,6 @@ async function getUserData(userName) {
 
     screen.renderUser(user)
 }
+
+
+getUserData("victoraamlima")
