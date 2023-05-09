@@ -1,42 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
-}
-
-img {
-  max-width: 100%;
-}
-
 body {
-  background-color:#24292e;
-  font-family: "Kumbh Sans", sans-serif;  
-  text-align: center;    
-  padding-bottom: 100px;
+  background-color: #24292e;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 main {
-  display: flex;  
-  justify-content: center;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  padding: 50px 0 0;      
+  padding: 50px 0 30px;
 }
 
-.devicon-github-original{
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+h2,
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.devicon-github-original {
   font-size: 60px;
   margin-bottom: 30px;
-  color: #FFFFFF;
-}
-
-.section{
-  padding: 70px 0;
+  color: #ffffff;
 }
 
 .container {
-  width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
-  max-width: 960px; /* quando chegar em 980px para de aumentar */
+  max-width: 1000px;
+  min-width: 295px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
   background-color: #fff;
   display: flex;
@@ -44,7 +46,6 @@ main {
   align-items: center;
   border-radius: 30px;
   padding: 30px;
-  margin: 0 auto;
 }
 
 .container header {
@@ -52,18 +53,12 @@ main {
   align-items: center;
   flex-direction: column;
   padding: 30px 0;
-}
-
-.container header h2 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
+  gap: 20px;
 }
 
 .container header #input-search {
-  width: 400px;
+  width: 235px;
   font-size: 17px;
-  margin: 0 auto;
   padding: 10px;
   border-radius: 7px;
   border: 1px solid grey;
@@ -72,11 +67,11 @@ main {
 .container header #btn-search {
   width: 200px;
   font-size: 17px;
-  margin: 20px auto 0;
   padding: 10px;
-  border-radius: 7px;  
+  border-radius: 7px;
   cursor: pointer;
   border: 1px solid grey;
+  font-weight: 700;
 }
 
 .container header #btn-search:hover {
@@ -85,177 +80,155 @@ main {
   border-color: #ffffff;
 }
 
-.container .profile-data{
+.container .profile-data {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;  
+  padding: 40px 0;
+  gap: 40px;
 }
 
-.container .profile-data .info {
-  display: flex;  
-  flex-wrap: wrap;
+.container .profile-data .user-info {
+  display: flex;
   align-items: center;
+  gap: 60px;
+  width: 100%;
 }
 
-.container .profile-data .info .data{
-  padding: 40px;
-  width: 50%;
+.container .profile-data .user-info .data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.container .profile-data .info img{
+.container .profile-data .user-info img {
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid rgb(255, 105, 180);
 }
 
-.container .profile-data .info h1{
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.container .profile-data .info p{
-  font-size: 15px;  
-  font-weight: 400;
-  line-height: 23px;
-}
-
-.container .profile-data .info h3{
-  font-size: 20px;  
-  font-weight: 600;
-  line-height: 23px;
+.container .profile-data .user-info p {
+  font-size: 15px;
   margin-top: 10px;
 }
 
-.container .profile-data .events h3{
-  font-size: 20px;  
-  font-weight: 600;
-  line-height: 23px;
+.empty-data {
+  font-size: 15px;
 }
 
-/* .container .profile-data .events ul {
+.container .profile-data .events,
+.container .profile-data .repositories-container {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  flex-basis: auto;
+  gap: 20px;
+}
 
-} */
+.container .profile-data .events ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-.container .profile-data .events ul li {
+.container .profile-data .events .event {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-top: 15px;
   grid-gap: 10px;
-  align-items: start;
-
+  justify-items: start;
+  align-items: center;
+}
+.container .profile-data .events .event h4 {
+  text-align: start;
 }
 
-.container .profile-data .events h4 a{
-  font-size: 15px;  
-  font-weight: 600;
-  line-height: 23px;
-  /* margin: 10px 10px 0 0; */
-  display: flex;
-  justify-content: end;
+.container .profile-data .events p {
+  font-size: 15px;
   text-align: left;
 }
 
-.container .profile-data .events p{
-  font-size: 15px;  
-  font-weight: 400;
-  line-height: 23px;
+.container .profile-data .repositories-container .repositories {
   display: flex;
-  text-align: left;
-}
-
-
-/* REPOSITORIES */
-
-.container .profile-data .repositories h2{
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.container .profile-data .repositories ul{
-  display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: center;
-
-  /* display: grid; */
-  /* grid-template-columns: 50% 50%; */
+  gap: 20px;
 }
 
-.container .profile-data .repositories .repository-info {
-  display: flex;
-  justify-content: center;
-}
-
-.container .profile-data .repositories .repository-info li{
-  background-color: #7755e7;
-  color: #fff;
-  margin: 10px;
-  display: flex;
-  padding: 10px;
-  border-radius: 7px;
-}
-
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories-container a {
   padding: 20px;
-  border: 1px solid grey;  
-  margin: 20px;
+  border: 1px solid grey;
   display: block;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
 
-.container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
-  color: #fff
+.container .profile-data .repositories-container a:hover {
+  background-color: #ff69b4;
+  color: #fff;
 }
 
-.container .profile-data.hide{
+.container .profile-data .repositories-container .repository-info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.container .profile-data .repositories-container .repository-info li {
+  background-color: #7755e7;
+  color: #fff;
+  display: flex;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.container .profile-data.hide {
   display: none;
 }
 
 @media (max-width: 1280px) {
   .container {
-    flex-direction: column;
     width: 90%;
     border-radius: 20px;
-  }
-
-  .container header {
-    width: 100%;
-  }
-
-  .container header h1 {
-    font-size: 24px;
-    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
+  .container header,
   .container header #input-search,
-  .container header #btn-search
-  {
+  .container header #btn-search {
+    width: 100%;
+  }
+
+  .container .profile-data .user-info {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .container .profile-data .user-info .data {
+    text-align: center;
+  }
+
+  .container .profile-data .user-info img {
     width: 100%;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 525px) {
   main {
-    padding: 15% 0;    
+    padding: 15% 0;
   }
 
-  .container .profile-data .info img{
-    margin-bottom: 20px;
+  .container {
+    padding: 10px;
+    min-width: 250px;
   }
 
-  .container .profile-data .info img,
-  .container .profile-data .info .data
-  {
-    width: 100%;
-    padding: 0;
+  .container .profile-data {
+    gap: 30px;
+  }
+
+  .container .profile-data .events .event {
+    grid-template-columns: 100%;
+    justify-items: center;
   }
 }
