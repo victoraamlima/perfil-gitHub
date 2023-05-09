@@ -1,18 +1,23 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+  font-size: 10px;
 }
 
-a{
-    text-decoration: none;
-    color: var(--cor-branca);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
 }
 
-ul{
-    list-style: none;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-img{
-    max-width: 100%;
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
 }
